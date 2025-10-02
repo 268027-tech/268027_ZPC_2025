@@ -12,7 +12,7 @@ body {
 
 /* Hlavička */
 header {
-  background: #111;
+  background: #ffffff00;
   padding: 15px;
 }
 
@@ -111,7 +111,7 @@ img {
 /* Footer */
 footer {
   text-align: center;
-  background: #111;
+  background: #ffffff00;
   color: #fff;
   padding: 15px 0;
 }
