@@ -92,10 +92,20 @@ strong { color: #ffffff; }
 
 /* Obrázky uvnitř obsahu */
 img {
-  max-width: 90%;
+  max-width: 800px;   /* fotka nikdy nebude širší než 800px */
+  width: 100%;        /* přizpůsobí se šířce rodiče */
   height: auto;
-  margin-top: 20px;
-  border-radius: 8px;
+  display: block;
+  margin: 20px auto;  /* centrování */
+  border-radius: 8px; /* volitelné zaoblení rohů */
+}
+
+.project-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
 /* Footer */
