@@ -109,6 +109,19 @@ img {
   display: block;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center; /* centrování */
+  gap: 20px;               /* mezery mezi obrázky */
+  flex-wrap: wrap;         /* pokud se nevejdou, zalomí se */
+}
+
+.gallery img {
+  width: 30%;      /* každý zabere cca třetinu šířky */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 /* Footer */
 footer {
   text-align: center;
