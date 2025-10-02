@@ -1,81 +1,66 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html, body { height: 100%; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   background: #f7f7f7;
   color: #222;
   line-height: 1.6;
 }
 
-/* Horní lišta s logem na pozadí */
+main { flex: 1; } /* aby footer držel dole */
+
 header {
-  background: url("images/logo_web.png") no-repeat center center;
-  background-size: contain;   /* zobrazí celé logo */
-  height: 120px;              /* zvětší výšku lišty */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;  /* odkazy napravo */
-  padding: 0 20px;
+  position: relative;
+  height: 220px;                 /* klidně zvedni na 240–260, když chceš víc loga */
+  background-color: #111;        /* barva po stranách / pod logem */
+  background-image: url("images/logo_web.png");
+  background-repeat: no-repeat;
+  background-position: center top;  /* logo odshora */
+  background-size: cover;           /* vyplní šířku, může se kousek ořezat na výšku */
 }
+
+/* menu doprava nahoru */
+.nav-container {
+  position: absolute;
+  right: 24px;
+  top: 14px;
+}
+
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
+
 header nav a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
   color: #fff;
-  text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity .2s ease, color .2s ease;
 }
-
-nav ul li a:hover {
+header nav a:hover {
+  opacity: 1;
   color: #ffcc00;
 }
 
+
 /* Hero sekce */
 .hero {
-  background: url("images/banerpng.png") no-repeat center center/cover;
+  background: url("images/banerpng.png") no-repeat center center / cover;
   text-align: center;
   padding: 120px 20px;
-  color: white;
+  color: #fff;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p  { font-size: 1.2rem; }
 
 /* Sekce */
 section {
@@ -84,13 +69,8 @@ section {
   margin: auto;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #111;
-}
+h2 { font-size: 2rem; margin-bottom: 20px; color: #111; }
 
-/* Footer */
 footer {
   text-align: center;
   background: #111;
