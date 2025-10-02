@@ -50,24 +50,35 @@ header nav a:hover {
   color: #00e0c6;   /* tyrkysová */
 }
 
-/* Hero pro úvod */
-.hero.homepage {
-  background: url("images/logo_web.png") no-repeat center center / cover;
+/* Základní styl pro všechny "hero" sekce */
+.hero {
+  min-height: 100vh;  /* výška přes celou obrazovku */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 200px 20px;   /* větší padding, aby text nebyl nalepený */
-  color: #fff;
+  color: white;
+  padding: 40px;
 }
 
-/* Hero pro ostatní stránky */
-.hero.otherpage {
-  background: url("images/baner.png") no-repeat center center / cover;
-  text-align: center;
-  padding: 120px 20px;
-  color: #fff;
+/* Úvodní stránka - logo přes celou stránku */
+.hero-uvod {
+  background-image: url("images/logo_web.png");
 }
 
-.hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-.hero p  { font-size: 1.2rem; }
+/* Ostatní stránky - baner přes celou stránku */
+.hero-baner {
+  background-image: url("images/banerpng.png");
+}
+
+/* Hover efekt v menu – tyrkysová */
+nav ul li a:hover {
+  color: #00e6e6; /* stejná tyrkysová jako logo */
+}
 
 /* Sekce */
 section {
