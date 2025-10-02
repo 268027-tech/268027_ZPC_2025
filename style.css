@@ -77,12 +77,12 @@ section {
 
 /* Úvodní stránka - logo přes celou stránku */
 .hero-uvod {
-  background-image: url("images/logo_web.png");
+  background-image: url("images/black_background.png");
 }
 
 /* Ostatní stránky - baner přes celou stránku */
 .hero-baner {
-  background-image: url("images/baner.png");
+  background-image: url("images/black_background.png");
 }
 
 /* Hover efekt v menu – tyrkysová */
@@ -93,6 +93,14 @@ nav ul li a:hover {
 /* Nadpisy */
 h1 { font-size: 3rem; margin-bottom: 20px; color: #ffffff; }
 h2 { font-size: 2rem; margin-bottom: 20px; color: #111; }
+
+/* Formát obrázků */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* zarovná na střed s mezerou */
+}
 
 /* Footer */
 footer {
