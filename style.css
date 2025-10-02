@@ -13,19 +13,18 @@ body {
   line-height: 1.6;
 }
 
-main { flex: 1; } /* aby footer držel dole */
+main { flex: 1; }
 
+/* Hlavička */
 header {
   position: relative;
-  height: 220px;                 /* klidně zvedni na 240–260, když chceš víc loga */
-  background-color: #111;        /* barva po stranách / pod logem */
-  background-image: url("images/logo_web.png");
+  height: 220px;
+  background-color: #111;
   background-repeat: no-repeat;
-  background-position: center top;  /* logo odshora */
-  background-size: cover;           /* vyplní šířku, může se kousek ořezat na výšku */
+  background-position: center top;
+  background-size: cover;
 }
 
-/* menu doprava nahoru */
 .nav-container {
   position: absolute;
   right: 24px;
@@ -45,14 +44,22 @@ header nav a {
   opacity: 0.9;
   transition: opacity .2s ease, color .2s ease;
 }
+
 header nav a:hover {
   opacity: 1;
-  color: #ffcc00;
+  color: #00e0c6;   /* tyrkysová */
 }
 
+/* Hero pro úvod */
+.hero.homepage {
+  background: url("images/logo_web.png") no-repeat center center / cover;
+  text-align: center;
+  padding: 200px 20px;   /* větší padding, aby text nebyl nalepený */
+  color: #fff;
+}
 
-/* Hero sekce */
-.hero {
+/* Hero pro ostatní stránky */
+.hero.otherpage {
   background: url("images/banerpng.png") no-repeat center center / cover;
   text-align: center;
   padding: 120px 20px;
@@ -71,6 +78,7 @@ section {
 
 h2 { font-size: 2rem; margin-bottom: 20px; color: #111; }
 
+/* Footer */
 footer {
   text-align: center;
   background: #111;
