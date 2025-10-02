@@ -60,7 +60,7 @@ header nav a:hover {
 
 /* Hero pro ostatní stránky */
 .hero.otherpage {
-  background: url("images/banerpng.png") no-repeat center center / cover;
+  background: url("images/baner.png") no-repeat center center / cover;
   text-align: center;
   padding: 120px 20px;
   color: #fff;
