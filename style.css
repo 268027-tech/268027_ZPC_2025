@@ -49,13 +49,22 @@ header nav a:hover {
   opacity: 1;
   color: #00e0c6;   /* tyrkysová */
 }
+¨
+/* Sekce - normální obsah */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-/* Základní styl pro všechny "hero" sekce */
+/* Hero sekce musí vždy zabírat celou šířku */
 .hero {
-  min-height: 100vh;   /* výška celé obrazovky */
-  width: 100%;        /* šířka celé obrazovky */
+  min-height: 100vh;       /* celá obrazovka */
+  width: 100%;             /* celá šířka */
+  max-width: 100%;         /* zruší omezení z "section" */
+  margin: 0;               /* zruší auto zarovnání */
   background-position: center;
-  background-size: cover;   /* roztáhne obrázek přes celou plochu */
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -81,13 +90,8 @@ nav ul li a:hover {
   color: #00e6e6; /* stejná tyrkysová jako logo */
 }
 
-/* Sekce */
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
+/* Nadpisy */
+h1 { font-size: 3rem; margin-bottom: 20px; color: #111; }
 h2 { font-size: 2rem; margin-bottom: 20px; color: #111; }
 
 /* Footer */
