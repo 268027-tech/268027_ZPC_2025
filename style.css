@@ -37,6 +37,30 @@ header nav a:hover {
   color: #00e0c6;   /* tyrkysová */
 }
 
+/* Header jako flexbox */
+header {
+  display: flex;
+  justify-content: space-between; /* levá část vlevo, pravá část vpravo */
+  align-items: center;             /* vertikální zarovnání */
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  border-bottom: 2px solid #00e0c6; /* tyrkysová linka */
+}
+
+/* Levá část (nadpis) */
+.header-left a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-left a:hover {
+  color: #00e0c6;
+  transform: scale(1.05);
+}
+
 /* Hero sekce */
 .hero {
   min-height: 100vh;  /* celá výška okna */
@@ -134,6 +158,18 @@ footer {
   background: #111;
   color: #fff;
   padding: 15px 0;
+  border-top: 2px solid #00e0c6; /* tyrkysová horní linka */
+}
+
+footer a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00e0c6;
 }
 
 
