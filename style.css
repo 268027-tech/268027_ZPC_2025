@@ -14,8 +14,8 @@ body {
 }
 /* Hlavička */
 header {
-  background: #0b2b32;
-  color: #0b2b32;
+  background: #212121;
+  color: #212121;
   padding: 15px;
 }
 
@@ -135,3 +135,90 @@ footer {
   color: #fff;
   padding: 15px 0;
 }
+
+
+
+
+/* Fade-in efekt */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide-in zespodu */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Použití na nadpisy a odstavce */
+h1, h2, h3, p {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+h1 {
+  animation-delay: 0.4s;
+}
+
+h2 {
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+h3 {
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+p {
+  animation: slideUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+header {
+  border-bottom: 3px solid #00e0c6; /* tyrkysová linka pod headerem */
+  animation: slideDown 0.8s ease forwards; /* animace při načtení */
+}
+
+footer {
+  border-top: 3px solid #00e0c6; /* tyrkysová linka nad footerem */
+  animation: slideUp 0.8s ease forwards;
+}
+
+img {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+img {
+  animation-delay: 0.8s;
+}
+
+.gallery img {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.gallery img:nth-child(1) { animation-delay: 0.8s; }
+.gallery img:nth-child(2) { animation-delay: 1.2s; }
+.gallery img:nth-child(3) { animation-delay: 1.4s; }
