@@ -102,7 +102,7 @@ img {
 }
 
 .project-img {
-  max-width: 800px;
+  max-width: 850px;
   width: 100%;
   height: auto;
   margin: 20px auto;
@@ -117,7 +117,7 @@ img {
 }
 
 .gallery img {
-  width: 30%;      /* každý zabere cca třetinu šířky */
+  width: 50%;      /* každý zabere cca třetinu šířky */
   border-radius: 8px;
   object-fit: cover;
 }
