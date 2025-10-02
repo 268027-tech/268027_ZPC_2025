@@ -7,68 +7,59 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f8f8f8;
-  color: #333;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* Header & Navigace */
+/* Horní lišta s logem na pozadí */
 header {
-  background: #222;
-  color: white;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .branding {
+  background-image: url("images/logo_web.png");
+  background-size: cover;
+  background-position: center;
+  height: 70px; /* výška lišty */
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-nav .branding .logo {
-  height: 40px;
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 
-nav .site-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-nav .menu {
+nav ul {
+  display: flex;
   list-style: none;
-  display: flex;
-  gap: 20px;
 }
 
-nav .menu li a {
-  color: white;
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-nav .menu li a:hover {
-  color: #1a73e8;
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
 /* Hero sekce */
 .hero {
-  background: url("images/background.jpg") no-repeat center center/cover;
-  color: white;
+  background: url("images/banerpng.png") no-repeat center center/cover;
   text-align: center;
   padding: 120px 20px;
+  color: white;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .hero p {
@@ -77,22 +68,21 @@ nav .menu li a:hover {
 
 /* Sekce */
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-section h2 {
-  font-size: 1.8rem;
+h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #222;
+  color: #111;
 }
 
 /* Footer */
 footer {
-  background: #222;
-  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  background: #111;
+  color: #fff;
+  padding: 15px 0;
 }
