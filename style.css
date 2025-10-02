@@ -6,10 +6,12 @@ html, body { height: 100%; }
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh;  /* vždy aspoň na výšku obrazovky */
   font-family: Arial, sans-serif;
+  background: #2c2c2c;
+  color: #222;
+  line-height: 1.6;
 }
-
 /* Hlavička */
 header {
   background: #0b2b32;
@@ -102,7 +104,7 @@ img {
 }
 
 .project-img {
-  max-width: 850px;
+  max-width: 500px;
   width: 100%;
   height: auto;
   margin: 20px auto;
@@ -116,16 +118,20 @@ img {
   flex-wrap: wrap;         /* pokud se nevejdou, zalomí se */
 }
 
-.gallery img {
-  width: 50%;      /* každý zabere cca třetinu šířky */
+.gallery img {       
   border-radius: 8px;
   object-fit: cover;
 }
 
-/* Footer */
+/* Obsah stránky roztahuje zbytek */
+main, section {
+  flex: 1;    /* zabere volný prostor mezi headerem a footerem */
+}
+
+/* Footer – vždy na spodku */
 footer {
   text-align: center;
-  background: #0b2b32;
-  color: #0b2b32;
+  background: #111;
+  color: #fff;
   padding: 15px 0;
 }
