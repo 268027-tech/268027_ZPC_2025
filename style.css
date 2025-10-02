@@ -50,14 +50,14 @@ header nav a:hover {
   padding: 40px;
 }
 
-/* Pozadí pro úvodní stránku */
-.hero-uvod {
-  background-image: url("images/black_background.png");
-}
 
 /* Pozadí pro ostatní stránky */
 .hero-baner {
   background-image: url("images/black_background.png");
+  background-size: cover;      /* roztáhne obrázek */
+  background-position: center; /* centrování */
+  background-repeat: no-repeat;
+  min-height: 100vh;           /* aspoň výška obrazovky */
 }
 
 /* Texty */
