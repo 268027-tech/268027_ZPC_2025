@@ -18,17 +18,14 @@ main { flex: 1; }
 /* Hlavička */
 header {
   position: relative;
-  height: 220px;
+  height: 80px;
   background-color: #111;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
 }
 
 .nav-container {
   position: absolute;
   right: 24px;
-  top: 14px;
+  top: 24px;
 }
 
 header nav ul {
@@ -49,31 +46,11 @@ header nav a:hover {
   opacity: 1;
   color: #00e0c6;   /* tyrkysová */
 }
-¨
-/* Sekce - normální obsah */
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
 
-/* Logo ve wrapperu */
-.logo-wrapper {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo-overlay {
-  max-width: 150px;   /* uprav si velikost loga */
-  height: auto;
-}
-
-/* Hero sekce musí vždy zabírat celou šířku */
+/* Hero sekce */
 .hero {
-  min-height: 100vh;       /* celá obrazovka */
-  width: 100%;             /* celá šířka */
-  max-width: 100%;         /* zruší omezení z "section" */
-  margin: 0;               /* zruší auto zarovnání */
+  min-height: 100vh;
+  width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -86,42 +63,29 @@ section {
   padding: 40px;
 }
 
+/* Úvodní stránka s šedým pozadím */
 .hero-uvod {
   background-image: url("images/logo_background.png"); /* šedý podklad */
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
-  color: white;
-  text-align: center;
   padding-top: 200px; /* rezerva pod logem */
 }
 
-/* Barevné logo nad pozadím */
-.hero-uvod::before {
-  content: "";
-  background: url("images/logo_symbol.png") no-repeat center top;
-  background-size: 180px auto;  /* velikost loga */
+/* Logo nahoře na úvodu */
+.logo-wrapper {
   position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 180px;
-  height: 180px;
 }
 
-/* Ostatní stránky - baner přes celou stránku */
+.logo-overlay {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Ostatní stránky - černý baner */
 .hero-baner {
-  background-image: url("images/black_background.png");
-}
-
-/* Hover efekt v menu – tyrkysová */
-nav ul li a:hover {
-  color: #00e6e6; /* stejná tyrkysová jako logo */
+  background-image: url("images/baner.png");
 }
 
 /* Stylizace textu */
