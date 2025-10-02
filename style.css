@@ -53,7 +53,7 @@ header nav a:hover {
 /* Základní styl pro všechny "hero" sekce */
 .hero {
   min-height: 100vh;   /* výška celé obrazovky */
-  width: 100vw;        /* šířka celé obrazovky */
+  width: 100%;        /* šířka celé obrazovky */
   background-position: center;
   background-size: cover;   /* roztáhne obrázek přes celou plochu */
   background-repeat: no-repeat;
