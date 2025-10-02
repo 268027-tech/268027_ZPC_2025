@@ -52,27 +52,28 @@ header nav a:hover {
 
 /* Pozadí pro úvodní stránku */
 .hero-uvod {
-  background-image: url("images/logo_background.png");
+  background-image: url("images/black_background.png");
 }
 
 /* Pozadí pro ostatní stránky */
 .hero-baner {
-  background-image: url("images/baner.png");
+  background-image: url("images/black_background.png");
 }
 
 /* Texty */
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px black; /* obrys pro čitelnost */
 }
 
 h2, h3, p {
   color: #fff;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 3px black;
 }
 
-strong { color: #00e0c6; }
+strong { color: #ffffff; }
 
 /* Obrázky uvnitř obsahu */
 img {
