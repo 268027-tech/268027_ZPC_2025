@@ -77,7 +77,31 @@ section {
 
 /* Úvodní stránka - logo přes celou stránku */
 .hero-uvod {
-  background-image: url("images/black_background.png");
+  background-image: url("images/logo_background.png"); /* tvoje šedé pozadí */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 180px; /* aby text nezačínal hned u loga */
+}
+
+/* Logo na středu nahoře */
+.logo-wrapper {
+  position: absolute;
+  top: 40px;         /* vzdálenost od horní hrany */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-overlay {
+  width: 200px;      /* velikost loga */
+  height: auto;
 }
 
 /* Ostatní stránky - baner přes celou stránku */
@@ -91,9 +115,10 @@ nav ul li a:hover {
 }
 
 /* Nadpisy */
-h1 { font-size: 3rem; margin-bottom: 20px; color: #ffffff; }
-h2 { font-size: 2rem; margin-bottom: 20px; color: #111; }
-
+h1 { font-size: 4rem; margin-bottom: 20px; color: #ffffff; }
+h2 { font-size: 1.75rem; margin-bottom: 20px; color: #ffffff; }
+h3 { font-size: 1.5rem; margin-bottom: 15px; color: #ffffff; }
+p { font-size: 1.5rem; margin-bottom: 20px; color: #ffffff; }
 /* Formát obrázků */
 img {
   max-width: 100%;
