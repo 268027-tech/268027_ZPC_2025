@@ -14,12 +14,23 @@ body {
 
 /* Horní lišta s logem na pozadí */
 header {
-  background-image: url("images/logo_web.png");
-  background-size: cover;
-  background-position: center;
-  height: 70px; /* výška lišty */
+  background: url("images/logo_web.png") no-repeat center center;
+  background-size: contain;   /* zobrazí celé logo */
+  height: 120px;              /* zvětší výšku lišty */
   display: flex;
   align-items: center;
+  justify-content: flex-end;  /* odkazy napravo */
+  padding: 0 20px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .nav-container {
