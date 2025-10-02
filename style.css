@@ -13,6 +13,7 @@ body {
 /* Hlavička */
 header {
   background: #ffffff00;
+  color: #ffffff00;
   padding: 15px;
 }
 
@@ -58,6 +59,12 @@ header nav a:hover {
   background-position: center; /* centrování */
   background-repeat: no-repeat;
   min-height: 100vh;           /* aspoň výška obrazovky */
+}
+
+section {
+  max-width: 1000px;   /* šířka obsahu */
+  margin: auto;        /* centrování */
+  padding: 120px 20px; /* horní + spodní odsazení (můžeš měnit) */
 }
 
 /* Texty */
@@ -112,6 +119,6 @@ img {
 footer {
   text-align: center;
   background: #ffffff00;
-  color: #fff;
+  color: #ffffff00;
   padding: 15px 0;
 }
