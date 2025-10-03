@@ -117,6 +117,7 @@ p {
 
 strong { color: #ffffff; }
 
+
 /* Obrázky uvnitř obsahu */
 img {
   max-width: 400px;   /* fotka nikdy nebude širší než 800px */
@@ -133,6 +134,9 @@ img {
   height: auto;
   margin: 20px auto;
   display: block;
+  border: 2px solid #00e0c6;   /* světlejší rámeček */
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);  /* horizontál, vertikál, blur, barva */
 }
 
 .gallery {
@@ -145,6 +149,9 @@ img {
 .gallery img {       
   border-radius: 8px;
   object-fit: cover;
+  border: 2px solid #00e0c6;   /* světlejší rámeček */
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);  /* horizontál, vertikál, blur, barva */
 }
 
 /* Obsah stránky roztahuje zbytek */
