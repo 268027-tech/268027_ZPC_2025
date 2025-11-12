@@ -1,14 +1,19 @@
 /* Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body {
+  height: 100%; /* Zajistí, že stránka má vždy plnou výšku */
+}
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: #2c2c2c;
+  background: #2c2c2c; /* Základní barva pozadí */
   color: #222;
   line-height: 1.6;
 }
@@ -57,7 +62,6 @@ header nav a:hover {
 
 /* Hero sekce */
 .hero {
-  min-height: 100vh;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -73,11 +77,8 @@ header nav a:hover {
 
 /* Pozadí pro ostatní stránky */
 .hero-baner {
-  background-image: url("images/black_background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background-color: #2c2c2c; /* Jednolitá šedá barva podobná aktuálnímu pozadí */
+  padding: 40px 20px; /* Přidání odsazení místo pevné výšky */
 }
 
 /* Texty */
@@ -137,42 +138,37 @@ img {
   animation-delay: 0.8s;
 }
 
+/* Galerie obrázků */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Obrázky se zalamují na další řádek */
+  justify-content: center; /* Zarovnání obrázků na střed */
+  gap: 20px; /* Mezera mezi obrázky */
+  padding: 20px;
+}
+
 .project-img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  margin: 20px auto;
-  display: block;
+  max-width: 300px; /* Maximální šířka obrázku */
+  width: 100%; /* Obrázek zabere celý dostupný prostor */
+  height: auto; /* Zachování poměru stran */
   border: 2px solid #00e0c6;
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.gallery img {
-  border-radius: 6px;
-  border: 2px solid #00e0c6;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-.gallery img:nth-child(1) { animation-delay: 0.8s; }
-.gallery img:nth-child(2) { animation-delay: 1.2s; }
-.gallery img:nth-child(3) { animation-delay: 1.4s; }
 
 /* Obsah stránky */
 main, section {
-  flex: 1;
+  flex: 1; /* Dynamické přizpůsobení výšky obsahu */
+  width: 100%; /* Zajistí, že obsah nepřesáhne šířku stránky */
+  max-width: 1200px; /* Maximální šířka obsahu */
+  margin: 0 auto; /* Zarovnání na střed */
+  padding: 20px; /* Odsazení od okrajů */
 }
 
 /* Footer */
@@ -182,14 +178,16 @@ footer {
   color: #fff;
   padding: 15px 0;
   border-top: 3px solid #00e0c6;
-  animation: slideUp 0.8s ease forwards;
+  margin-top: auto; /* Zajistí, že patička bude na spodním okraji stránky */
 }
+
 footer a {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
 }
+
 footer a:hover {
   color: #00e0c6;
 }
@@ -216,6 +214,14 @@ footer a:hover {
   h2 { font-size: 2rem; }
   h3 { font-size: 1.6rem; }
   p { font-size: 1.2rem; }
+
+  .gallery {
+    gap: 15px; /* Menší mezery mezi obrázky na menších zařízeních */
+  }
+
+  .project-img {
+    max-width: 250px; /* Menší obrázky na menších zařízeních */
+  }
 }
 
 /* Mobily */
@@ -237,17 +243,69 @@ footer a:hover {
     padding: 60px 20px;
   }
 
+  .hero-baner {
+    background-size: contain; /* Pozadí se přizpůsobí obsahu */
+  }
+
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.6rem; }
   h3 { font-size: 1.4rem; }
   p { font-size: 1rem; }
 
-  .project-img {
-    max-width: 90%;
+  .gallery {
+    flex-direction: column; /* Obrázky se zobrazí pod sebou na malých zařízeních */
+    align-items: center; /* Zarovnání obrázků na střed */
   }
 
-  .gallery {
-    flex-direction: column;
-    align-items: center;
+  .project-img {
+    max-width: 90%; /* Obrázky zabírají většinu šířky na malých zařízeních */
   }
+
+  h1, h2, p {
+    text-align: center; /* Zarovnání textu na střed */
+    padding: 0 10px; /* Odsazení textu od okrajů */
+  }
+}
+
+/* Stylování tlačítka Tinkercad */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tinkercad-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #00e0c6;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* Skryté na začátku */
+  transform: scale(0.9); /* Mírně zmenšené na začátku */
+  animation: fadeIn 0.8s ease forwards; /* Animace zjevení */
+  animation-delay: 1s; /* Zpoždění animace */
+}
+
+.tinkercad-button:hover {
+  background-color: #00b3a0;
+  transform: scale(1.05);
+}
+
+/* Stylování videa */
+.project-video {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #00e0c6;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Skryté na začátku */
+  transform: scale(0.9); /* Mírně zmenšené na začátku */
+  animation: fadeIn 0.8s ease forwards; /* Animace zjevení */
+  animation-delay: 0.8s; /* Zpoždění animace */
 }
