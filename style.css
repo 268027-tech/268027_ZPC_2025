@@ -407,3 +407,8 @@ section#final-project .image-row img {
   max-width: 400px; /* Maximální šířka obrázků */
   height: auto; /* Zachování poměru stran */
 }
+
+/* Upravená barva textu v odrážkách na světlejší odstín (#e0e0e0), aby byla stejná jako v odstavcích a lépe čitelná. */
+section#final-project .content ul li {
+  color: #e0e0e0; /* Světlejší barva textu pro lepší čitelnost, stejná jako v odstavcích */
+}
