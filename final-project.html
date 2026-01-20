@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finální projekt | Moje portfolio ZPC 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+     <div class="header-left">
+      <a href="index.html" class="site-title">268027_ZPC_2025</a>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="o-mne.html">O mně</a></li>
+          <li><a href="final-project.html">Finální projekt</a></li>
+          <li><a href="ukol1.html">Úkol 1</a></li>
+          <li><a href="ukol2.html">Úkol 2</a></li>
+          <li><a href="ukol3.html">Úkol 3</a></li>
+          <li><a href="ukol4.html">Úkol 4</a></li>
+          <li><a href="ukol5.html">Úkol 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- Obsah stránky -->
+<section id="final-project" class="content">
+  <h1>Recyklátor PET lahví na 3D filament</h1>
+
+  <!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Úvod: Od odpadu k materiálu</h2>
+  <p>Cílem mého semestrálního projektu bylo navrhnout a sestrojit plně funkční modulární zařízení, které dokáže recyklovat použité PET lahve a přeměnit je na kvalitní tiskovou strunu (filament) pro 3D tiskárny. Zařízení funguje na principu pultruze (tažení), kdy je plastový proužek tažen přes vyhřívanou trysku, kde dochází k jeho reformování na standardní průměr 1,75 mm. Tento proces nejen snižuje množství plastového odpadu, ale umožňuje získat technický materiál prakticky zdarma.</p>
+
+   <div class="image-row">
+    <a href="images/model.png" target="_blank">
+      <img src="images/model.png" alt="Inventor model projektu" class="project-img zoom">
+    </a>
+
+    <a href="images/main.jpg" target="_blank">
+      <img src="images/main.jpg" alt="Hlavní náhled projektu" class="project-img zoom">
+    </a>
+  </div>
+</section>
+
+<!-- Upravená sekce obrázků s třídou image-row -->
+ 
+
+  <!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Mechanická konstrukce a Bolt-Lock systém</h2>
+  <p>Základem stroje je robustní šasi tvořené dvěma hliníkovými profily. Konstrukce využívá dva rozdílné systémy uchycení komponent podle jejich účelu:</p>
+  <h3>Bolt-Lock systém (Horní funkční moduly):</h3>
+  <p>Komponenty, se kterými je potřeba manipulovat (naviják, vedení filamentu, senzory), jsou uchyceny pomocí tzv. kladívkových T-matic (drop-in nuts). Tento systém umožňuje po povolení šroubu okamžité vyjmutí modulu směrem vzhůru, aniž by bylo nutné posouvat ostatní díly. To zajišťuje snadnou údržbu a rychlou rekonfiguraci stroje.</p>
+
+  <div class="gallery"></div>
+    <a href="images/bolt_lock.jpg" target="_blank">
+      <img src="images/bolt_lock.jpg" alt="Náhled bolt locků" class="project-img zoom">
+    </a>
+  </div>
+
+  <h3>Pevné šasi (Spodní krytování a rukojeti):</h3>
+  <p>Naopak strukturální prvky, jako jsou ochranné mřížky elektroniky a madla, jsou upevněny pomocí standardních vložných matic. Ty zajišťují maximální pevnost a tuhost celého rámu, ale pro demontáž vyžadují vysunutí z profilu.</p>
+
+<div class="gallery"></div>
+    <a href="images/print_lock.jpg" target="_blank">
+      <img src="images/print_lock.jpg" alt="Náhled print locků" class="project-img zoom">
+    </a>
+  </div>
+</section>
+
+<!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Pohon (High-Torque Puller):</h2>
+  <p>Pro posuv materiálu jsem navrhl systém s kontinuálním Arduino servem. Přestože má servo vlastní převodovku, doplnil jsem jej o další externí zpřevodování (viditelné velké ozubené kolo). Toto řešení poskytuje drtivý kroutící moment potřebný k protlačení tuhého plastu a zajišťuje stabilní, pomalý tah bez kolísání rychlosti.</p>
+</section>
+
+<!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Elektronika a Hardware</h2>
+
+  <div class="gallery"></div>
+    <a href="images/electricity.jpg" target="_blank">
+      <img src="images/electricity.jpg" alt="Přehled celé elektroniky" class="project-img zoom" style="max-width: 500px;">
+    </a>
+  </div>
+
+  <p>Elektronika je "mozkem" stroje, postavená na platformě Arduino Uno, a zajišťuje synchronizaci teploty s rychlostí navíjení.</p>
+  <h3>Tepelný management:</h3>
+  <p>K tavení dochází v upravené komoře osazené keramickým topným tělískem (12V/40W), běžným v 3D tisku. Spínání výkonu řídí MOSFET tranzistor na základě PID regulace, což udržuje teplotu stabilní s přesností na stupně Celsia.</p>
+
+  <div class="gallery"></div>
+    <a href="images/topne_teleso.png" target="_blank">
+      <img src="images/topne_teleso.png" alt="Topné tělísko" class="project-img zoom">
+    </a>
+  </div>
+
+  <h3>Napájení a bezpečnost:</h3>
+  <p>Systém je napájen 12V průmyslovým zdrojem. Pro logiku Arduina je napětí sníženo efektivním Step-down měničem. Celý obvod je jištěn tavnou pojistkou a silové spoje jsou realizovány přes spolehlivé WAGO svorky.</p>
+
+  <h3>Senzorika:</h3>
+  <p>Mechanický senzor neustále hlídá přítomnost vstupního proužku. Pokud materiál dojde, systém to vyhodnotí a provede "tiché zastavení" (vypne ohřev i motor), čímž předchází běhu naprázdno.</p>
+
+<div class="gallery"></div>
+    <a href="images/senzor.jpg" target="_blank">
+      <img src="images/senzor.jpg" alt="Topné tělísko" class="project-img zoom">
+    </a>
+
+     <a href="images/senzor_rez.jpg" target="_blank">
+      <img src="images/senzor_rez.jpg" alt="Topné tělísko" class="project-img zoom">
+    </a>
+  </div>
+</section>
+
+<!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Software a Uživatelské rozhraní (HMI)</h2>
+  <p>Stroj je plně autonomní a nevyžaduje připojení k PC. Veškeré nastavení probíhá přes integrovaný panel.</p>
+  <h3>Displej a ovládání:</h3>
+  <p>Dominantou panelu je 20x4 LCD displej, který zobrazuje veškeré telemetrické údaje (teplota, rychlost, stav). Ovládání je řešeno intuitivním rotačním enkodérem.</p>
+  
+  <div class="gallery"></div>
+    <a href="images/display.jpg" target="_blank">
+      <img src="images/display.jpg" alt="Fotka dipleje" class="project-img zoom">
+    </a>
+  </div>
+
+  <h3>Menu a Funkce:</h3>
+  <p>Software obsahuje pokročilé funkce:</p>
+  <ul>
+    <li><strong>Presety:</strong> Rychlé načtení přednastavených hodnot (teplota/rychlost) pro různé typy a tloušťky lahví.</li>
+    <li><strong>Ladění:</strong> Možnost manuálně měnit citlivost teplotního senzoru, PID konstanty či rychlost motoru za běhu.</li>
+    <li><strong>Easter Eggs:</strong> Pro demonstraci výkonu a pokročilého programování (non-blocking kód) jsem do systému integroval i hratelné minihry.</li>
+  </ul>
+</section>
+
+<!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Výzvy a další vývoj</h2>
+  <p>Během realizace jsem musel řešit několik technologických překážek:</p>
+  <h3>Spojování proužků:</h3>
+  <p>Kritickým bodem pro kontinuální provoz je spojování PET pásků před vstupem do stroje. Spoj musí být mechanicky odolný, ale zároveň geometricky přesný, aby prošel tryskou bez zaseknutí.</p>
+
+  <div class="gallery">
+    <video controls class="project-video">
+              <source src="images/prouzek_1.mp4" type="video/mp4">
+              Váš prohlížeč nepodporuje přehrávání videa.
+            </video>
+
+            <video controls class="project-video">
+              <source src="images/prouzek_2.mp4" type="video/mp4">
+              Váš prohlížeč nepodporuje přehrávání videa.
+            </video>
+
+    <video controls class="project-video">
+              <source src="images/prouzek_3.mp4" type="video/mp4">
+              Váš prohlížeč nepodporuje přehrávání videa.
+            </video>
+  </div>
+
+
+  <h3>Slepá ulička - Welder:</h3>
+  <p>Pokus o výrobu externí svářečky hotových filamentů pomocí tělesa z tavné pistole selhal. Ukázalo se, že teplota tavení topného tělesa z tavné pistole (cca 190 °C) je pro svaření PET materiálu (potřeba >250 °C) nedostatečná.</p>
+
+  <h3>Modularita v praxi:</h3>
+  <p>Díky systému Bolt-Lock je stroj připraven na přidání budoucích modulů:</p>
+  <ul>
+    <li>Řezačka PET lahve</li>
+    <li>Rovnoměrný naviják</li>
+    <li>Zpětný navijecí systém</li>
+    <li>Svařovač filamentu</li>
+    <li>a další</li>
+  </ul>
+</section>
+
+<!-- Spojení nadpisů a textů do společných rámečků -->
+<section class="content-section">
+  <h2>Závěr a další kroky</h2>
+  <p>Cílem mého semestrálního projektu bylo navrhnout a realizovat recyklátor PET lahví, který nebude jen jednoduchým jednoúčelovým strojem, ale komplexní a modulární vývojovou platformou. Tento cíl se podařilo naplnit.</p>
+  <p>Výsledkem práce je plně funkční zařízení. Po stránce hardwaru a firmwaru je stroj dokončený – podařilo se úspěšně vyřešit mechanickou konstrukci, elektronické řízení i stabilizaci klíčových procesních podmínek. Regulace teploty tavení i udržování konstantní rychlosti pultruze jsou nyní na stroji stabilní a bezproblémové.</p>
+  <p>V současné chvíli se tak těžiště práce přesunulo od vývoje stroje k ladění samotného technologického procesu výroby. Hlavní výzvou je nyní experimentální stanovení ideálního poměru mezi šířkou řezaného proužku a tloušťkou stěny konkrétní láhve, což je nezbytné pro dosažení konzistentního průměru výsledného filamentu. Souběžně probíhá kalibrace tiskových profilů ve Sliceru (zejména nastavení průtoku materiálu a retrakcí) specificky pro tento recyklát, aby bylo dosaženo co nejvyšší kvality finálních výtisků na 3D tiskárně.</p>
+
+<div class="gallery"></div>
+    <a href="images/PET_print1.jpg" target="_blank">
+      <img src="images/PET_print1.jpg" alt="Ukázky tisku z PET filamentu" class="project-img zoom">
+    </a>
+  </div>
+
+</section>
+</section>
+
+   <!-- Patička -->
+  <footer>
+    <p><a href="index.html" class="footer-link">© 2025 David | DLPRINT | Vytvořeno v HTML & CSS</a></p>
+  </footer>
+
+</body>
+</html>
