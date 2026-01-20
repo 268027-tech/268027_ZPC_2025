@@ -179,7 +179,7 @@ img {
 .image-row {
   display: flex;
   flex-wrap: wrap; /* Obrázky se zalamují na další řádek */
-  justify-content: flex-start; /* Zarovnání obrázků vlevo */
+  justify-content: center; /* Zarovnání obrázků na střed */
   gap: 20px; /* Mezera mezi obrázky */
 }
 
@@ -386,5 +386,24 @@ footer a:hover {
 .project-video {
   max-width: 300px; /* Maximální šířka videa */
   width: 100%; /* Video zabere celý dostupný prostor */
+  height: auto; /* Zachování poměru stran */
+}
+
+/* Zajištění správného použití stylů pro .image-row v sekci #final-project */
+section#final-project {
+  max-width: 1200px; /* Zajištění dostatečné šířky rodičovského kontejneru */
+  margin: 0 auto; /* Zarovnání na střed */
+}
+
+section#final-project .image-row {
+  display: grid; /* Použití grid layoutu pro přesné rozložení obrázků */
+  grid-template-columns: repeat(2, 1fr); /* Dva obrázky na řádek */
+  gap: 20px; /* Mezera mezi obrázky */
+  justify-items: center; /* Zarovnání obrázků na střed */
+}
+
+section#final-project .image-row img {
+  width: 100%; /* Obrázky zabírají celý dostupný prostor buňky */
+  max-width: 400px; /* Maximální šířka obrázků */
   height: auto; /* Zachování poměru stran */
 }
